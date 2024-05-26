@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.Extensions.DependencyInjection;
 using API_pc.Data;
+using API_pc.integration;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionstring = builder.Configuration.GetConnectionString("PostgresSQLConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(
 options => options.UseNpgsql(connectionstring));
+
+//servicios url externa
+builder.Services.AddScoped<listarUsuario, listarUsuario>();
+builder.Services.AddScoped<mostrarUsuario, mostrarUsuario>();
+builder.Services.AddScoped<crearUsuario, crearUsuario>();
 
 //Servicios de Apis
 builder.Services.AddEndpointsApiExplorer();

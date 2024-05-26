@@ -6,14 +6,14 @@ using API_pc.Models.DTO;
 
 namespace API_pc.integration
 {
-    public class listarUsuarios
+    public class listarUsuario
     {
-        private readonly ILogger<listarUsuarios> _logger;
+        private readonly ILogger<listarUsuario> _logger;
 
         private const string API_URL = "https://reqres.in/api/users/";
         private readonly HttpClient httpClient;
 
-        public listarUsuarios(ILogger<listarUsuarios> logger)
+        public listarUsuario(ILogger<listarUsuario> logger)
         {
             _logger = logger;
             httpClient = new HttpClient();

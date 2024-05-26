@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using API_pc.Data;
 using API_pc.Models.DTO;
+using API_pc.integration;
 
 namespace API_pc.Controllers
 {
@@ -15,10 +16,16 @@ namespace API_pc.Controllers
     public class UsuariosApiController : ControllerBase
     {
         private readonly ApplicationDbContext _context;
+        private readonly listarUsuario _listarUsuario;
+        private readonly mostrarUsuario _mostrarUsuario;
+        private readonly crearUsuario _crearUsuario;
 
-        public UsuariosApiController(ApplicationDbContext context)
+        public UsuariosApiController(ApplicationDbContext context,listarUsuario listarUsuarios,mostrarUsuario mostrarUsuario,crearUsuario crearUsuario)
         {
             _context = context;
+            _listarUsuario = listarUsuarios;
+            _mostrarUsuario = mostrarUsuario;
+            _crearUsuario = crearUsuario;
         }
 
         // GET: api/UsuariosApi
@@ -26,6 +33,7 @@ namespace API_pc.Controllers
         public async Task<ActionResult<IEnumerable<Usuario>>> GetUsuarios()
         {
             return await _context.Usuarios.ToListAsync();
+            
         }
 
         // GET: api/UsuariosApi/5
@@ -33,6 +41,7 @@ namespace API_pc.Controllers
         public async Task<ActionResult<Usuario>> GetUsuario(int id)
         {
             var usuario = await _context.Usuarios.FindAsync(id);
+           
 
             if (usuario == null)
             {
