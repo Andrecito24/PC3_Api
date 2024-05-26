@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj": {}
+    "D:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj": {}
   },
   "projects": {
-    "d:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj": {
+    "D:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj",
+        "projectUniqueName": "D:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj",
         "projectName": "API_pc",
-        "projectPath": "d:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj",
+        "projectPath": "D:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\API_pc.csproj",
         "packagesPath": "C:\\Users\\leona\\.nuget\\packages\\",
-        "outputPath": "d:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\obj\\",
+        "outputPath": "D:\\Leonardo\\Universidad\\ciclo_7\\API_pc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\leona\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -46,6 +46,42 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.6.2, )"
             }
           },
           "imports": [
